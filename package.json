@@ -11,6 +11,7 @@
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",
     "prettier": "^3.2.5",
+    "prisma": "^5.13.0",
     "turbo": "latest"
   },
   "engines": {
@@ -22,6 +23,7 @@
     "packages/*"
   ],
   "dependencies": {
+    "@prisma/client": "^5.13.0",
     "@types/express": "^4.17.21",
     "express": "^4.19.2",
     "ts-node": "^10.9.2"
