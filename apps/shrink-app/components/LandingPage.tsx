@@ -3,16 +3,15 @@ import Navbar from "./Navbar";
 import Image from "next/image";
 import heroimage from "../public/heroimage.png";
 
-const Home = () => {
+const LandingPage = () => {
   return (
     <div >
       <Navbar />
       <div className="flex flex-col items-center">
-
-      <Image src={heroimage} className="w-5/6" alt="h" />
+        <Image src={heroimage} className="w-5/6" alt="h" />
       </div>
     </div>
   );
 };
 
-export default Home;
+export default LandingPage;
