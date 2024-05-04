@@ -1,7 +1,9 @@
-import Home from "../components/Home";
+import LandingPage from "../components/LandingPage";
 
 export default function Page(): JSX.Element {
-  return <div className="w-full">
-    <Home />
-  </div>;
+  return (
+    <div className="w-full">
+      <LandingPage />
+    </div>
+  );
 }

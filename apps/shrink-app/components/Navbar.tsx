@@ -12,6 +12,7 @@ const Navbar = () => {
       </div>
       <div className="flex gap-6">
         <Button
+        
           onClick={() => {
             alert("hello 1");
           }}
