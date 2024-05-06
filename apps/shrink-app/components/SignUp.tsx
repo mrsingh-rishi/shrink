@@ -33,7 +33,7 @@ export const SignUp = () => {
   }
 
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center">
+    <div className="min-h-screen flex flex-col justify-center items-center bg-slate-200">
       <div className="flex-grow"></div>
       <div className="w-full max-w-md">
         {/* <Center> */}

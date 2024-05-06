@@ -7,7 +7,7 @@ import { FaHome, FaKey, FaUser } from "react-icons/fa";
 const Sidebar = () => {
   const router = useRouter();
   return (
-    <div className="flex flex-col gap-4 font-bold text-xl text-slate-800 pl-20 pt-10">
+    <div className="flex flex-col gap-4 font-bold text-xl pl-20 pt-10">
       <Button
         className="flex gap-1 mr-4 p-2 hover:bg-slate-400 rounded-lg "
         onClick={() => router.push("/home")}

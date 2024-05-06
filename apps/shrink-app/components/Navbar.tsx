@@ -1,7 +1,11 @@
 "use client";
 import { Button } from "@repo/ui/button";
+import { getServerSession } from "next-auth";
+import { useRouter } from "next/navigation";
 
 const Navbar = () => {
+  const session = getServerSession();
+  const router = useRouter();
   return (
     <div className="flex justify-around bg-slate-400 text-xl font-bold">
       <div className="flex gap-12 m-2 p-2">
@@ -10,16 +14,15 @@ const Navbar = () => {
         <div>Pricing</div>
         <div>Company</div>
       </div>
-      <div className="flex gap-6">
-        <Button
-        
-          onClick={() => {
-            alert("hello 1");
-          }}
-          className="bg-slate-300 rounded-xl p-2 m-2"
-        >
-          SignIn
-        </Button>
+      <div className="flex gap-6">        
+          <Button
+            onClick={() => {
+              router.push("/signin");
+            }}
+            className="bg-slate-300 rounded-xl p-2 m-2"
+          >
+            SignIn
+          </Button>
         <Button
           onClick={() => {
             alert("hello 2");

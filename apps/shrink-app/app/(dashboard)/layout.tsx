@@ -11,10 +11,10 @@ export default function RootLayout({
     <div>
       <Navbar />
       <div className="w-full flex justify-center ">
-        <div className="w-[20%] h-screen  bg-gray-200 ">
+        <div className="w-[20%] h-screen  bg-slate-200 ">
           <Sidebar />
         </div>
-        <div className="w-[80%] h-screen bg-gray-50 p-10">{children}</div>
+        <div className="w-[80%] h-screen bg-slate-50 p-10">{children}</div>
       </div>
     </div>
   );
