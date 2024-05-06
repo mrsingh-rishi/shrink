@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "exports": {
-    "./email": "./src/email.ts"
+    "./index":"./src/index.ts"
     }
 }
