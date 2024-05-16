@@ -10,6 +10,10 @@
   "author": "",
   "license": "ISC",
   "exports": {
-    "./index":"./src/index.ts"
-    }
+    "./googleVerify": "./src/google.ts"
+  },
+  "dependencies": {
+    "google-auth-library": "^9.9.0",
+    "jsonwebtoken": "^9.0.2"
+  }
 }

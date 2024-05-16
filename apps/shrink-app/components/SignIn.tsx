@@ -1,10 +1,13 @@
 "use client";
+import { GoogleLogin } from "@react-oauth/google";
 // import { Center } from "@repo/ui/center";
 import { TextInput } from "@repo/ui/textinput"; // Assuming you have a TextInput component
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import toast from "react-hot-toast";
+import { handleGoogleLogin } from "../actions/saveUserToDb";
+import axios from "axios";
 
 export const SignIn = () => {
   const router = useRouter();
@@ -79,6 +82,22 @@ export const SignIn = () => {
           </div>
         </div>
         {/* </Center> */}
+        <div>
+          <GoogleLogin
+            onSuccess={async (Credential) => {
+              const result = await axios.post(`api/users`, {
+                token: Credential.credential,
+              });
+              const { data } = result;
+              if (data.success) {
+                // TODO: Add user to the redux or recoil for the state management
+                router.push("/home");
+              } else {
+                console.log(data.error);
+              }
+            }}
+          />
+        </div>
       </div>
       <div className="flex-grow"></div>
     </div>

@@ -15,7 +15,22 @@ datasource db {
 
 model User {
   id                Int                 @id @default(autoincrement())
-  email             String             @unique
+  email             String              @unique
   name              String
   password          String
+  socialLogins      SocialLogin[]       // Add relation to SocialLogin
 }
+
+model SocialLogin {
+  id                Int                 @id @default(autoincrement())
+  user              User                @relation(fields: [userId], references: [id])
+  userId            Int
+  provider          String              // Provider, e.g., "google", "facebook"
+  sub               String              // User ID provided by the social provider
+  name              String?
+  familyName        String?             // Family name or last name
+  givenName         String?             // Given name or first name
+  email             String?
+  profile           String?             // Profile URL
+}
+
